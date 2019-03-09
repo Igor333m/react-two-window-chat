@@ -7,21 +7,23 @@ import PropTypes from 'prop-types';
 class ChatWindow extends Component {
 
   static propTypes = {
-    users: PropTypes.array.isRequired
+    users: PropTypes.array.isRequired,
+    messages: PropTypes.array.isRequired
   }
 
   render () {
+    const { users, messages } = this.props;
     return (
       <div className="container">
           <div className="chat-window">
-            <Name user={this.props.users[0].username} />
-            <ChatMessages />
+            <Name user={users[0].username} />
+            <ChatMessages messages={messages}/>
             <AddMessage />
           </div>
 
           <div className="chat-window">
-            <Name user={this.props.users[1].username} />
-            <ChatMessages />
+            <Name user={users[1].username} />
+            <ChatMessages messages={messages}/>
             <AddMessage />
           </div>
         </div>

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ChatMessages extends Component {
 
-
+  static propTypes = {
+    messages: PropTypes.array.isRequired
+  }
   render () {
     return (
       <ul className="message-list">
