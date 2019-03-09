@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Name from './Name';
+import ChatMessages from './ChatMessages';
 
 
 const users = [{ username: 'Amy' }, { username: 'John' }];
@@ -26,18 +27,7 @@ class ChatWindow extends Component {
       <div className="container">
           <div className="chat-window">
             <Name />
-            <ul className="message-list">
-              {messages.map((message, index) => (
-                <li
-                  key={index}
-                  className={
-                    message.username === users[0].username ? 'message sender' : 'message recipient'
-                  }
-                >
-                  <p>{`${message.username}: ${message.text}`}</p>
-                </li>
-              ))}
-            </ul>
+            <ChatMessages />
 
             <div>
               <form className="input-group">
@@ -53,18 +43,7 @@ class ChatWindow extends Component {
 
           <div className="chat-window">
             <Name />
-            <ul className="message-list">
-              {messages.map((message, index) => (
-                <li
-                  key={index}
-                  className={
-                    message.username === users[1].username ? 'message sender' : 'message recipient'
-                  }
-                >
-                  <p>{`${message.username}: ${message.text}`}</p>
-                </li>
-              ))}
-            </ul>
+            <ChatMessages />
 
             <div>
               <form className="input-group">
