@@ -14,11 +14,11 @@ green and Amy's messages should appear in blue.
 Remember to follow these steps from the [Thinking in React Guide](https://reactjs.org/docs/thinking-in-react.html) when you're building your
 React applications:
 
-## Step 1. Break down the app into a hierarchy of components. Draw a box around each React component.
+#### Step 1. Break down the app into a hierarchy of components. Draw a box around each React component.
 
-## Step 2. Determine the data in our app.
+#### Step 2. Determine the data in our app.
 
-## Step 3. Figure out the data that should be a part of our state:
+#### Step 3. Figure out the data that should be a part of our state:
 
 1.  Is it passed in from a parent via props? If so, it probably isn’t state.
 
@@ -27,7 +27,7 @@ React applications:
 3.  Can you compute it based on any other state or props in your component?
     If so, it isn’t state.
 
-## Step 4. Identify where each piece of state lives.
+#### Step 4. Identify where each piece of state lives.
 
 1.  Identify every component that renders something based on that state.
 
