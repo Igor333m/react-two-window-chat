@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Name from './Name';
 
 
 const users = [{ username: 'Amy' }, { username: 'John' }];
@@ -24,9 +25,7 @@ class ChatWindow extends Component {
     return (
       <div className="container">
           <div className="chat-window">
-            <h2>Super Awesome Chat</h2>
-            <div className="name sender">{users[0].username}</div>
-
+            <Name />
             <ul className="message-list">
               {messages.map((message, index) => (
                 <li
@@ -53,8 +52,7 @@ class ChatWindow extends Component {
           </div>
 
           <div className="chat-window">
-            <h2>Super Awesome Chat</h2>
-            <div className="name sender">{users[1].username}</div>
+            <Name />
             <ul className="message-list">
               {messages.map((message, index) => (
                 <li
