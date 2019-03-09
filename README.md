@@ -37,7 +37,7 @@ If you can’t find a component where it makes sense to own the state, create
 a new component simply for holding the state and add it somewhere in the
 hierarchy above the common owner component.
 
-## Step 5. Add Inverse Data Flow.
+#### Step 5. Add Inverse Data Flow.
 
 State should be updated inside of the component where that state lives.
 If we pass state down from component A to component B and then need to update
