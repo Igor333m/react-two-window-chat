@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Name from './Name';
 import ChatMessages from './ChatMessages';
+import AddMessage from './AddMessage';
 
 
 const users = [{ username: 'Amy' }, { username: 'John' }];
@@ -13,14 +14,6 @@ const messages = [
 
 
 class ChatWindow extends Component {
-  
-  /*
-  If the user did not type anything, he/she should not be
-  allowed to submit.
-  */
-  isDisabled = () => {
-    return false;
-  };
 
   render () {
     return (
@@ -28,33 +21,13 @@ class ChatWindow extends Component {
           <div className="chat-window">
             <Name />
             <ChatMessages />
-
-            <div>
-              <form className="input-group">
-                <input type="text" className="form-control" placeholder="Enter your message..." />
-                <div className="input-group-append">
-                  <button className="btn submit-button" disabled={this.isDisabled()}>
-                    SEND
-                  </button>
-                </div>
-              </form>
-            </div>
+            <AddMessage />
           </div>
 
           <div className="chat-window">
             <Name />
             <ChatMessages />
-
-            <div>
-              <form className="input-group">
-                <input type="text" className="form-control" placeholder="Enter your message..." />
-                <div className="input-group-append">
-                  <button className="btn submit-button" disabled={this.isDisabled()}>
-                    SEND
-                  </button>
-                </div>
-              </form>
-            </div>
+            <AddMessage />
           </div>
         </div>
     );
