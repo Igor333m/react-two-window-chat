@@ -16,6 +16,12 @@ class App extends Component {
     ]
   }
 
+  newMessage = message => {
+    this.setState( oldState => ({
+      messages: [...oldState.messages, message]
+    }));
+  }
+
   render() {
     const { users, messages } = this.state;
     return (
@@ -23,7 +29,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Two-window Chat</h1>
         </header>
-        <ChatWindow users={users} messages={messages}/>
+        <ChatWindow users={users} messages={messages} newMessage={this.newMessage} />
       </div>
     );
   }
