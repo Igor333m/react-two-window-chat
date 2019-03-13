@@ -17,13 +17,13 @@ class ChatWindow extends Component {
       <div className="container">
           <div className="chat-window">
             <Name user={users[0].username} />
-            <ChatMessages messages={messages}/>
+            <ChatMessages user={users[0].username} messages={messages}/>
             <AddMessage />
           </div>
 
           <div className="chat-window">
             <Name user={users[1].username} />
-            <ChatMessages messages={messages}/>
+            <ChatMessages user={users[1].username} messages={messages}/>
             <AddMessage />
           </div>
         </div>

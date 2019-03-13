@@ -4,21 +4,24 @@ import PropTypes from 'prop-types';
 class ChatMessages extends Component {
 
   static propTypes = {
-    messages: PropTypes.array.isRequired
+    messages: PropTypes.array.isRequired,
+    user: PropTypes.string.isRequired
   }
   render () {
+    const { user, messages } = this.props;
+    
     return (
       <ul className="message-list">
-        {/* {messages.map((message, index) => (
+        {messages.map((message, index) => (
           <li
             key={index}
             className={
-              message.username === users[0].username ? 'message sender' : 'message recipient'
+              message.username === user ? 'message sender' : 'message recipient'
             }
           >
             <p>{`${message.username}: ${message.text}`}</p>
           </li>
-        ))} */}
+        ))}
       </ul>
     );
   }
