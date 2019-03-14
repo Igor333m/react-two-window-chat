@@ -13,24 +13,27 @@ class AddMessage extends Component {
   }
 
   /*
-  If the user did not type anything, he/she should not be
-  allowed to submit.
+    If the user did not type anything, he/she should not be 
+    allowed to submit.
   */
   isDisabled = () => {
-    return false;
+    return this.state.value === '' ? true : false;
   }
 
   handleChange = event => {
     this.setState({value: event.target.value});
   }
 
+  /* 
+    Add current message to app state 
+  */
   handleSubmit = event => {
-    //alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
     this.props.onAddMessage({
       username: this.props.user,
       text: this.state.value
     });
+    this.setState({value: ''});
   }
 
   render () {
@@ -45,8 +48,11 @@ class AddMessage extends Component {
             value={this.state.value}
           />
           <div className="input-group-append">
-            <button className="btn submit-button" type="submit" value="Submit" disabled={this.isDisabled()}>
-              SEND
+            <button
+              className="btn submit-button"
+              type="submit" value="Submit"
+              disabled={this.isDisabled()}
+            >SEND
             </button>
           </div>
         </form>
